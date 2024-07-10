@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <link rel="stylesheet" href="Banking2.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="file:///Users/pavanreddy/Desktop/Gen/Pavan/Banking_Video.webm" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="container">
+        <h1>Banking System</h1>
+        <div class="login-form">
+            <ul class="tab-group">
+                <li class="tab active" id="customer-tab">Customer Login</li>
+                <li class="tab" id="admin-tab">Admin Login</li>
+            </ul>
+            <div class="form-container" id="customer-form">
+                <form id="customerLoginForm">
+                    <label for="customer-email">Email:</label>
+                    <input type="email" id="customer-email" required>
+                    <label for="customer-password">Password:</label>
+                    <input type="password" id="customer-password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div class="form-container" id="admin-form" style="display: none;">
+                <form id="adminLoginForm">
+                    <label for="admin-email">Email:</label>
+                    <input type="email" id="admin-email" required>
+                    <label for="admin-password">Password:</label>
+                    <input type="password" id="admin-password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+        <div class="customer-dashboard" id="customer-dashboard" style="display: none;">
+            <h2>Welcome, Customer</h2>
+            <div class="transaction-details">
+                <h3>Transaction Details</h3>
+                <ul id="transaction-list">
+                    <li>Transaction 1: $100</li>
+                    <li>Transaction 2: $200</li>
+                    <li>Transaction 3: $300</li>
+                </ul>
+            </div>
+            <div class="actions">
+                <button id="deposit-button">Deposit</button>
+                <button id="withdraw-button">Withdraw</button>
+                <button id="message-support-button">Message Support</button>
+            </div>
+        </div>
+        <div class="admin-dashboard" id="admin-dashboard" style="display: none;">
+            <h2>Welcome, Admin</h2>
+            <div class="active-customers">
+                <h3>Active Customers</h3>
+                <p id="active-customers-count">5</p>
+            </div>
+        </div>
+    </div>
+    <script src="Banking2.js"></script>
+</body>
+</html>
